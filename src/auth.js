@@ -4,6 +4,7 @@ var app = express();
 app.use(express.json());
 const axios = require('axios')
 var serviceAccount = require("../config/sk.json");
+const port = process.env.PORT || 3000
 
 const API_KEY = 'AIzaSyB5BPj4Hn8arcVYG7SuAK9Ib_EsIx7-4j4'
 
@@ -79,7 +80,6 @@ const signIn = async (email,password) =>{
 
  var server = app.listen(8081, function () {
     var host = server.address().address
-    var port = server.address().port
     console.log("Example app listening at http://%s:%s", host, port)
  })
  
